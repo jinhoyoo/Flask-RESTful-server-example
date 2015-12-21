@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login</title>
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        <ul class=flashes>
+        {% for message in messages %}
+          <li>{{ message }}</li>
+        {% endfor %}
+        </ul>
+      {% endif %}
+    {% endwith %}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+
+    <div class="container">
+      <h1>Welcome to Datalabs!</h2>
+
+        <form action="/login", method="POST">
+          E-mail:<br>
+          <input type="text" name="e_mail">
+          <br>
+          Password:<br>
+          <input type="password" name="password"
+          <br><br>
+          <input type="submit" value="Submit">
+        </form>
+
+    </div>
+  </body>
+</html>

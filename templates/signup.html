@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Signup page</title>
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        <ul class=flashes>
+        {% for message in messages %}
+          <li>{{ message }}</li>
+        {% endfor %}
+        </ul>
+      {% endif %}
+    {% endwith %}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+
+    <div class="container">
+      <h1>Datalabs signup page</h2>
+
+        <h2>Registration</h2>
+        <form action="/signup", method="POST">
+          <br>E-mail:<br>
+          <input type="text" name="email">
+          <br>First name:<br>
+          <input type="text" name="first_name">
+          <br>Last name:<br>
+          <input type="text" name="last_name">
+          <br>Password:<br>
+          <input type="password" name="password">
+          <br>
+          <input type="submit" value="Submit">
+        </form>
+    </div>
+
+    <h2>User list</h2>
+    <table>
+    {% for item in result %}
+       <tr>
+            <th> {{ item.e_mail }} </th>
+            <th> {{ item.firstName}} </th>
+            <th> {{ item.lastName }} </th>
+            <th> {{ item.root_folder_link }} </th>
+       </tr>
+    {% endfor %}
+    </table>
+
+  </body>
+</html>
