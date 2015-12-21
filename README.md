@@ -1,20 +1,21 @@
- RESTful and Web server with Flask example
- ===================
+RESTful and Web server with Flask example
+===================
+ 
  The prototyping of web server and RESTful server with Flask framework in Python.
 
- Run service
- ----------------
- * Run ```python web_server.py```.
-  - Will use ngnix server.
+Run service
+----------------
+* Run ```python web_server.py```.
+ - Will use ngnix server.
 
 
- Test service
- ----------------
- * Run ```run_test.sh```.
-  - Uses ```uniitest``` and ```nosetest``` framework.
+Test service
+----------------
+* Run ```run_test.sh```.
+ - Uses ```uniitest``` and ```nosetest``` framework.
 
 
- Plug-ins that I used.
+Plug-ins that I used.
 -------------------
 
 ### RESTful API framework ###
